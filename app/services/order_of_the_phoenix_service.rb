@@ -1,5 +1,9 @@
 class OrderOfThePhoenixService
 
+	def initialize(house)
+		@house = house
+	end
+
 	def character_data
 		data = conn.get("characters")
 		JSON.parse(data.body, symbolize_names: true)
@@ -11,6 +15,7 @@ class OrderOfThePhoenixService
 		  f.adapter  Faraday.default_adapter
 		  f.params[:key] = ENV["POTTER_API_KEY"]
 		  f.params[:orderOfThePhoenix] = true
+		  f.params[:house] = @house
 		end
 	end
 end
