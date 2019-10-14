@@ -1,6 +1,6 @@
 <center>
 	<% if @members.count > 0 %>
-		<h1><%= pluralize(@members.count, "Member") %> in <%= @members.first.house %> House</h1>
+		<h1><%= pluralize(@members.count, "#{@members.first.house} Member") %></h1>
 
 		<% @members.each do |member| %>
 		<h2 class="name"><%= member.name %></h2>
