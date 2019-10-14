@@ -16,7 +16,7 @@ gem 'figaro'
 
 group :development, :test do
   gem 'pry'
-  gem 'shoulda-matchers'
+  gem 'vcr'
 end
 
 group :test do
