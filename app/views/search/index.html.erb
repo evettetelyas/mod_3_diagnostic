@@ -3,7 +3,7 @@
 		<h1><%= pluralize(@members.count, "#{@members.first.house} Member") %></h1>
 
 		<% @members.each do |member| %>
-			<h2 class="name"><%= member.name %></h2>
+			<h2 class="name">✨ <%= member.name %> ✨</h2>
 			<p class="house"><i>House: <%= member.house %></i></p>
 			<% if member.role %>
 				<p class="role"><i>Role: <%= member.role %></i></p>
