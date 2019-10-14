@@ -1,0 +1,10 @@
+<center>
+	<h1><%= @members.count %> Members</h1>
+
+	<% @members.each do |member| %>
+	<h2><%= member.name %></h2>
+	<p><i>House: <%= member.house %></i></p>
+	<p><i>Role: <%= member.role %></i></p>
+	<p><i>Patronus: <%= member.patronus %></i></p>
+	<% end %>
+</center>
