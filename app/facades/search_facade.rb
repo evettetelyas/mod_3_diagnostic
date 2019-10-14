@@ -7,10 +7,6 @@ class SearchFacade
 	def service
 		OrderOfThePhoenixService.new(@house)
 	end
-	
-	# def house_characters
-	# 	service.character_data.select { |member| member[:house] == @house }
-	# end
 
 	def house_characters
 		service.character_data
