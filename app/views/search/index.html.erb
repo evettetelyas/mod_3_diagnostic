@@ -1,10 +1,14 @@
 <center>
-	<h1><%= @members.count %> Members</h1>
+	<% if @members.count > 0 %>
+		<h1><%= pluralize(@members.count, "Member") %> in <%= @members.first.house %> House</h1>
 
-	<% @members.each do |member| %>
-	<h2 class="name"><%= member.name %></h2>
-	<p class="house"><i>House: <%= member.house %></i></p>
-	<p class="role"><i>Role: <%= member.role %></i></p>
-	<p class="patronus"><i>Patronus: <%= member.patronus %></i></p>
+		<% @members.each do |member| %>
+		<h2 class="name"><%= member.name %></h2>
+		<p class="house"><i>House: <%= member.house %></i></p>
+		<p class="role"><i>Role: <%= member.role %></i></p>
+		<p class="patronus"><i>Patronus: <%= member.patronus %></i></p>
+		<% end %>
+	<% else %>
+	  <h1>This house has no members. wah.</h1>
 	<% end %>
 </center>
